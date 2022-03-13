@@ -62,7 +62,14 @@ const App = () => {
           onLocalLoad={loadFromLocalHandler}
         />
       </Card>
-      <a className={styles['github-link']} href="https://github.com/muchammadindra97">Indra's GitHub</a>
+      <a
+        className={styles['github-link']}
+        href="https://github.com/muchammadindra97"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Indra's GitHub
+      </a>
     </div>
   );
 }

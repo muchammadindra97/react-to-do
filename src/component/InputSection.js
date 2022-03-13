@@ -10,7 +10,8 @@ const InputSection = (props) => {
     setToDo(event.target.value);
   }
 
-  const addToDoHandler = () => {
+  const addToDoHandler = (event) => {
+    event.preventDefault();
     const isValidInput = inputValidation(toDo);
 
     setInputErrors(isValidInput);
@@ -42,10 +43,18 @@ const InputSection = (props) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles['input-container']}>
-        <input ref={toDoInputEl} className={styles['input-field']} type="text" placeholder="Type to do...." name="toDo" value={toDo} onChange={toDoInputHandler} />
-        <button className={styles['button-add']} type="button" onClick={addToDoHandler}>Add</button>
-      </div>
+      <form className={styles['input-container']} onSubmit={addToDoHandler}>
+        <input
+          ref={toDoInputEl}
+          className={styles['input-field']}
+          type="text"
+          placeholder="Type to do...."
+          name="toDo"
+          value={toDo}
+          onChange={toDoInputHandler}
+        />
+        <button className={styles['button-add']} type="submit">Add</button>
+      </form>
       {inputErrors && <Error errors={inputErrors} />}
     </div>
   );
