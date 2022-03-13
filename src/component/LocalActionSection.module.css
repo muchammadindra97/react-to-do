@@ -1,0 +1,30 @@
+.local-action {
+    background-color: #ff9900;
+    padding: .25rem;
+    color: #3b1e00;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.local-action button {
+    cursor: pointer;
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+    background-color: transparent;
+    border-style: none;
+}
+
+.local-action button:hover {
+    color: #884f15;
+}
+
+.local-action button:active {
+    color: #be7933;
+}
+
+.local-action button:focus-visible {
+    outline: #bd0250 solid .125rem;
+    border-radius: .25rem;
+}
